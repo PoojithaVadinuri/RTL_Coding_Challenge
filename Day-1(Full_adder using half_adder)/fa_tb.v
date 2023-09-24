@@ -6,11 +6,11 @@ wire s,cout;
 fa DUT(s,cout,a,b,cin);
 initial
   begin
-    repeat(12)
+  repeat(5)
     begin
     {a,b,cin}=$random;
 	#1;
-	$display(a,b,cin ,":",{s,cout});
+	$display(a,b,cin ,":",{cout,s});
 	end
   end
 endmodule
