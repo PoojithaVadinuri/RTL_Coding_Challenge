@@ -6,7 +6,7 @@ wire s,cout;
 fa DUT(s,cout,a,b,cin);
 initial
   begin
-  repeat(5)
+    repeat(12)
     begin
     {a,b,cin}=$random;
 	#1;
