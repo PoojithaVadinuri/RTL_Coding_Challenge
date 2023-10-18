@@ -1,6 +1,6 @@
 module tb;
 reg clk,rst,b;
-wire reg q;
+wire q;
 siso_design xyz(clk,b,q);
 initial
 begin
