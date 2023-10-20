@@ -1,0 +1,2 @@
+word.v -sv
+word_tb.v
