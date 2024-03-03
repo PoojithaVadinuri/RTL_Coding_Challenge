@@ -1,0 +1,55 @@
+
+task stop_run_pulse;
+	begin
+		@(posedge clk);
+		stop_run=1;
+		@(posedge clk);
+		stop_run=0; //HB
+	end
+endtask
+
+task nextpulse;
+	begin
+		@(posedge clk);
+		next=1;
+		@(posedge clk);
+		next=0;
+	end
+endtask
+
+task incpulse;
+	begin
+		@(posedge clk);
+		inc=1;
+		@(posedge clk);
+		inc=0;
+	end
+endtask
+
+task decpulse;
+	begin
+		$display("entry time of task",$time);
+		@(posedge clk);
+		dec=1;
+		@(posedge clk);
+		dec=0;
+		$display("exit time of task",$time);
+	end
+endtask
+
+task incdecpulse;
+	begin
+		@(posedge clk);
+		{inc,dec}=2'b11;
+		@(posedge clk);
+		{inc,dec}=2'b00;
+	end
+endtask
+
+task cycles;
+input integer n;
+begin
+	repeat(n) @(posedge clk);
+end
+endtask
+
