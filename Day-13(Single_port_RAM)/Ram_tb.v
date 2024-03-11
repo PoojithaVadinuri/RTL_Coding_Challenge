@@ -59,6 +59,7 @@ initial begin
 reset();
 write();
 read();
+ @(posedge clk); $finish;
 end
  
  
