@@ -1,0 +1,2 @@
+lift.v 
+lift_tb.v -sv
